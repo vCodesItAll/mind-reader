@@ -1,40 +1,16 @@
-# PSEUDOCODE SESSION
- SMAC (SPECIFIC, METHODICAL, AND CONSISTENT) LIST
+Vanessa language:
 
-1. UNDERSTOOD THE PROBLEMS
-2. BREAK THE ISSUE INTO SMALLER PARTS
-3. WIREFRAMES/ATOMIC
-4. STATE ?
-    DATA STRUCTURES
-    ALGORITHMS
-5. P-F-O
+need to populate each page with an object index from an array
+objects need keys and values
+so lets write out the objects with keys and values for each page
 
-# Understanding the problem
-- navigation 
+p0, p1, p2, p3, p4, p5
 
-    - forward and back
+break down pages into 
 
-    - needs to be part of state instead of hyperlinks
+- having buttons (1 rectangular and 1 round)
+- 
 
-    - think of as one page but the elements change conditionally
+let's write sample keys and values for page 1
 
-    - state holds the information and makes it so anytime we change state it re-renders the view
-
-    - user clicks the buttons
-
-    - go button must reset the emotes and go next
-
-    - last page push information into state so when you get there you have that information to use
-
-# State (data structures and algorithms)
-
-- initialize event listeners
-- 6 elements in an array to initialize the pages
-- each page is a state
-
-## procedural
-
-- initialize array
-- initialize index
-- instantiate whole new object for each page?
 
