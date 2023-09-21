@@ -1,0 +1,3 @@
+.container {
+    display:inline-block; /* only way to add sizing to span */
+}

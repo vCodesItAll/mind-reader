@@ -128,7 +128,13 @@ roundButtonImage: reload.png
 roundButtonAction: load array index page 0
 
 
+function for page state
+    
+- initialize array
+- initialize index
+- instantiate whole new object for each page
 
+make the objects
 
 
 
