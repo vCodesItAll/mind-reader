@@ -63,3 +63,7 @@ const page6 = {
 
 };
 
+function makeElementAppear(){
+    // grab the element by its ID
+    const element = document.getElementById('test')
+}
