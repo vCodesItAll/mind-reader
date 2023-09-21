@@ -63,7 +63,14 @@ const page6 = {
 
 };
 
-function makeElementAppear(){
-    // grab the element by its ID
-    const element = document.getElementById('test')
-}
+let objects = [
+    { header: "I can read your mind", 
+    roundButtonString: "GO", 
+    blueButtonString: null,
+    caption1: null,
+    caption2: null,
+    roundButtonImage: null,
+    roundButtonAction load array index page 1 // will be a fn
+    }
+];
+
