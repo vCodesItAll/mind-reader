@@ -61,10 +61,18 @@ let state = 0;
 document.getElementById("roundButtonString").addEventListener("click", () => {
     state++;
     init();
+    if (state >= 5 ) {
+        state = 0;
+    };
+    
 });
 document.getElementById("blueButtonString").addEventListener("click", () => {
     state++;
     init();
+    if (state >= 5 ) {
+        state = 0;
+    };
+    
 });
 
 // if state is >=  the index of 5 then reset the index so it will start over at last page
