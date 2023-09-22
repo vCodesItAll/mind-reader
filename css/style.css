@@ -1,0 +1,27 @@
+.container {
+    display:inline-block; /* only way to add sizing to span */
+}
+
+#test {
+    display:none;
+}
+
+.btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.blueButton {
+
+    padding-bottom: 1em;
+
+}
+
+h1 {
+    color: black;
+    background-color: white;
+}
