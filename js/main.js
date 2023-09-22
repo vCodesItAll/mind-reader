@@ -49,11 +49,28 @@ let arr = [
 
 // }
  ];
+
+// onload render page 1
+
+
+
 // state represents each page
 let state = 0;
 
-document.getElementById("roundButtonString").addEventListener("click", state++);
-document.getElementById("blueButtonString").addEventListener("click", state++);
+// make buttons render next page (just assume right now they click next)
+document.getElementById("roundButtonString").addEventListener("click", () => {
+    state++;
+    init();
+});
+document.getElementById("blueButtonString").addEventListener("click", () => {
+    state++;
+    init();
+});
+
+// if state is >=  the index of 5 then reset the index so it will start over at last page
+if (state >= 5 ) {
+    state = 0;
+};
 
 // populates the elements 
 function init() {
@@ -74,6 +91,7 @@ function init() {
     caption2.textContent = arr[state].caption2;
 };
 
+init();
 
 /* to load pages
 comment out all the lines immediately after each let statement above
