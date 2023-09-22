@@ -49,22 +49,52 @@ let arr = [
 
 // }
  ];
+// state represents each page
+let state = 0;
+
+document.getElementById("roundButtonString").addEventListener("click", state++);
+document.getElementById("blueButtonString").addEventListener("click", state++);
 
 // populates the elements 
-let header = document.getElementById("header");
-header.textContent = arr[5].header; 
+function init() {
+    
+    let header = document.getElementById("header");
+    header.textContent = arr[state].header; 
 
-let roundButtonString = document.getElementById("roundButtonString");
-roundButtonString.textContent = arr[5].roundButtonString;
+    let roundButtonString = document.getElementById("roundButtonString");
+    roundButtonString.textContent = arr[state].roundButtonString;
 
-let blueButtonString = document.getElementById("blueButtonString");
-blueButtonString.textContent = arr[5].blueButtonString;
+    let blueButtonString = document.getElementById("blueButtonString");
+    blueButtonString.textContent = arr[state].blueButtonString;
 
-let caption1 = document.getElementById("caption1");
-caption1.textContent = arr[5].caption1;
+    let caption1 = document.getElementById("caption1");
+    caption1.textContent = arr[state].caption1;
 
-let caption2 = document.getElementById("caption2");
-caption2.textContent = arr[5].caption2;
+    let caption2 = document.getElementById("caption2");
+    caption2.textContent = arr[state].caption2;
+};
+
+
+/* to load pages
+comment out all the lines immediately after each let statement above
+if else statement
+
+
+make the initial round button and the following blue buttons fetch all the objects arr[i+1]
+are you starting on page one?
+    true - roundbutton fetches all objects from arr[1]
+    false - are you on page 2?
+        bluebutton fetches all objects from arr[2]
+            false - are you on page 3?
+                bluebutton fetches all objects from arr[3]
+                    false - are you on page 4?
+                        bluebutton fetches all objects from arr[4]
+                            false - fetch all objects from arr[5]
+
+
+
+*/
+
 
 
 // page 1 elements appear
