@@ -1,9 +1,11 @@
 let arr = [
+
+    // page one
     { header:   "I can read your mind",  
     roundButtonString:  "GO" },
     //   roundButtonAction: "" },
 
-
+    // page two
     { header: "Pick a number from 01 - 99" ,
      blueButtonString: "NEXT",
     caption1:"when you have your number click next" , 
@@ -11,7 +13,7 @@ let arr = [
 //      roundButtonAction: "load array index page 0" },
     
 
-
+    // page three
     { header: "Add both digits together to get a new number",
      blueButtonString: "NEXT" , 
     caption1: "Ex: 14 is 1 + 4 = 5" ,
@@ -20,29 +22,26 @@ let arr = [
     // roundButtonAction:" load array index page 0 "},
 
 
-
-//     { header: "Subtract your new number from the original number" ,
-
-//      blueButtonString: "NEXT" , 
-//      caption1: "Ex: 14 is 1 + 4 = 5" ,
-//      caption2: "click next to proceed" ,
-//      roundButtonImage: reload.png ,
+    // page four
+    { header: "Subtract your new number from the original number" ,
+     blueButtonString: "NEXT" , 
+     caption1: "Ex: 14 is 1 + 4 = 5" ,
+     caption2: "click next to proceed" ,
+     roundButtonString: "Start over" },
 //      roundButtonAction: "load array index page 0" },
 
-//  {
-//     header: symbolArr,
 
-//     blueButtonString: "REVEAL", 
-//     caption1: "Find your new number.",
-//     caption2: "Note the symbol beside the number",
-//     roundButtonImage: reload.png,
+    // page five
+
+    { header: "Yo do me a favor and picture a sick buc-ee picture right here: picture your number right here",
+    blueButtonString: "REVEAL", 
+    caption1: "Find your new number.",
+    caption2: "Note the symbol beside the number",
+    roundButtonString: "Start over" },
 //     roundButtonAction: "load array index page 0",
 
-// },
-
-//  {
-//     header: chosenSymbol,
-
+    // page six
+    { header: "pls clap and cheer",
 //     caption1: "Your symbol is:",
 //     caption2: chosenSymbol,
 //     roundButtonImage: reload.png,
@@ -53,20 +52,26 @@ let arr = [
 
 // populates the elements 
 let header = document.getElementById("header");
-header.textContent = arr[3].header; 
+header.textContent = arr[4].header; 
 
 let roundButtonString = document.getElementById("roundButtonString");
-roundButtonString.textContent = arr[1].roundButtonString;
+roundButtonString.textContent = arr[4].roundButtonString;
 
 let blueButtonString = document.getElementById("blueButtonString");
-blueButtonString.textContent = arr[1].blueButtonString;
+blueButtonString.textContent = arr[4].blueButtonString;
 
 let caption1 = document.getElementById("caption1");
-caption1.textContent = arr[1].caption1;
+caption1.textContent = arr[4].caption1;
+
+let caption2 = document.getElementById("caption2");
+caption2.textContent = arr[4].caption2;
 
 
 // page 1 elements appear
 // page 2 elements appear
+// page 3 elements appear
+// page 4 elements appear
+// page 5 elements
 
 
 
