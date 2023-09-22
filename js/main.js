@@ -42,9 +42,9 @@ let arr = [
 
     // page six
     { header: "pls clap and cheer",
-//     caption1: "Your symbol is:",
-//     caption2: chosenSymbol,
-//     roundButtonImage: reload.png,
+    caption1: "Your symbol is:",
+    caption2: "BUC-EE!!!!!! LET'S GOOOOOOOOOOOOO *airhorns blare*",
+    roundButtonString: "Start over"}
 //     roundButtonAction: "load array index page 0",
 
 // }
@@ -52,19 +52,19 @@ let arr = [
 
 // populates the elements 
 let header = document.getElementById("header");
-header.textContent = arr[4].header; 
+header.textContent = arr[5].header; 
 
 let roundButtonString = document.getElementById("roundButtonString");
-roundButtonString.textContent = arr[4].roundButtonString;
+roundButtonString.textContent = arr[5].roundButtonString;
 
 let blueButtonString = document.getElementById("blueButtonString");
-blueButtonString.textContent = arr[4].blueButtonString;
+blueButtonString.textContent = arr[5].blueButtonString;
 
 let caption1 = document.getElementById("caption1");
-caption1.textContent = arr[4].caption1;
+caption1.textContent = arr[5].caption1;
 
 let caption2 = document.getElementById("caption2");
-caption2.textContent = arr[4].caption2;
+caption2.textContent = arr[5].caption2;
 
 
 // page 1 elements appear
@@ -74,7 +74,7 @@ caption2.textContent = arr[4].caption2;
 // page 5 elements
 
 
-
+// for symbol generation
 // 1. generate a range of number 0-99
 // check resource channel
 // 2. assign random symbol to each number (qty-9)
@@ -85,7 +85,6 @@ caption2.textContent = arr[4].caption2;
 
 
 // setting state
-
 // increase index and make sure everything renders hardcoded
 // how to increment automatically
 
