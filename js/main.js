@@ -1,26 +1,23 @@
 let arr = [
     { header:   "I can read your mind",  
-    roundButtonString:  "GO", },
-
-//      roundButtonAction: "load array index page 1" },
+    roundButtonString:  "GO" },
+    //   roundButtonAction: "" },
 
 
     { header: "Pick a number from 01 - 99" ,
-
-     blueButtonString: "NEXT" }, 
-//
-//     //  roundButtonImage: "reload.png" ,
+     blueButtonString: "NEXT",
+    caption1:"when you have your number click next" , 
+    roundButtonString: "Start over" },
 //      roundButtonAction: "load array index page 0" },
     
 
 
-//     { header: "Add both digits together to get a new number",
-
-//     blueButtonString: "NEXT" , 
-//      caption1: "Ex: 14 is 1 + 4 = 5" ,
-//      caption2: "click next to proceed" ,
-//      roundButtonImage: reload.png ,
-//      roundButtonAction:" load array index page 0 "},
+    { header: "Add both digits together to get a new number",
+     blueButtonString: "NEXT" , 
+    caption1: "Ex: 14 is 1 + 4 = 5" ,
+    caption2: "click next to proceed" ,
+    roundButtonString: "Start over" },
+    // roundButtonAction:" load array index page 0 "},
 
 
 
@@ -56,10 +53,22 @@ let arr = [
 
 // populates the elements 
 let header = document.getElementById("header");
-header.textContent = arr[1].header; 
+header.textContent = arr[3].header; 
 
 let roundButtonString = document.getElementById("roundButtonString");
 roundButtonString.textContent = arr[1].roundButtonString;
+
+let blueButtonString = document.getElementById("blueButtonString");
+blueButtonString.textContent = arr[1].blueButtonString;
+
+let caption1 = document.getElementById("caption1");
+caption1.textContent = arr[1].caption1;
+
+
+// page 1 elements appear
+// page 2 elements appear
+
+
 
 // 1. generate a range of number 0-99
 // check resource channel
