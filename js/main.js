@@ -51,14 +51,17 @@ let arr = [
  ];
 
 // local storage state
-let state = localStorage.getItem("mindReaderState") || 0;
+let state = parseInt(localStorage.getItem("mindReaderState")) || 0;
 
 
 function generateNumberList() {
     // check if current state is page 5
     if (state === 4) {
         const header = document.getElementById("header");
-        header.innerHTML= " "; // clears header
+        header.innerHTML= ""; // clears header
+
+        const numberList = document.getElementById("numberList");
+        numberList.innerHTML = "";
 
         for (let i = 0; i < 100; i++) {
             const number = i.toString().padStart(2, "0"); // 2 digit format
@@ -97,7 +100,7 @@ document.getElementById("blueButtonString").addEventListener("click", () => {
     }
     localStorage.setItem("mindReaderState", state);
     generateNumberList();
-    updatePageContent;
+    updatePageContent();
 });
 
 // Render event listener for round button
@@ -113,6 +116,7 @@ document.getElementById("roundButtonString").addEventListener("click", () => {
 });
 
 generateNumberList();
+updatePageContent();
 
 /* to load pages
 comment out all the lines immediately after each let statement above
@@ -130,11 +134,7 @@ are you starting on page one?
                         bluebutton fetches all objects from arr[4]
                             false - fetch all objects from arr[5]
 
-
-
 */
-
-
 
 // page 1 elements appear
 // page 2 elements appear
