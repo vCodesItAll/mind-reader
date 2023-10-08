@@ -54,11 +54,53 @@ let arr = [
 let state = localStorage.getItem("mindReaderState") || 0;
 
 
+function generateNumberList() {
+    // check if current state is page 5
+    if (state === 4) {
+        const header = document.getElementById("header");
+        header.innerHTML= " "; // clears header
 
+        for (let i = 0; i < 100; i++) {
+            const number = i.toString().padStart(2, "0"); // 2 digit format
+            const iconNumber = i % 10; // end digit matches icon
+            const iconClass = `bi bi-emoji-${iconNumber}`;
 
+            const listItem = document.createElement("span");
+            listItem.className = "container";
+            listItem.innerHTML = `<span class="${iconClass}"></span> ${number}`;
+            header.appendChild(listItem);
+        }
+    } 
+}
 
+// Function to update page by current state
+function updatePageContent(){
+    const page = arr[state];
+    const header = document.getElementById("header");
+    const blueButton = document.getElementById("blueButtonString");
+    const caption1 = document.getElementById("caption1");
+    const caption2 = document.getElementById("caption2");
+    const roundButton = document.getElementById("roundButtonString");
 
-// make buttons render next page (just assume right now they click next)
+    header.textContent = page.header;
+    blueButton.textContent = page.blueButtonString;
+    caption1.textContent = page.caption1 || "";
+    caption2.textContent = page.caption2 || "";
+    roundButton.textContent = page.roundButtonString;
+}
+
+// Render event listener for blue button
+document.getElementById("blueButtonString").addEventListener("click", () => {
+    state++;
+    if (state >= 5 ) {
+        state = 0;
+    }
+    localStorage.setItem("mindReaderState", state);
+    generateNumberList();
+    updatePageContent;
+});
+
+// Render event listener for round button
 document.getElementById("roundButtonString").addEventListener("click", () => {
     state++;
     init();
@@ -67,14 +109,7 @@ document.getElementById("roundButtonString").addEventListener("click", () => {
     };
     
 });
-document.getElementById("blueButtonString").addEventListener("click", () => {
-    state++;
-    init();
-    if (state >= 5 ) {
-        state = 0;
-    };
-    
-});
+
 
 // if state is >=  the index of 5 then reset the index so it will start over at last page
 if (state >= 5 ) {
