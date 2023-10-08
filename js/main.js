@@ -50,12 +50,13 @@ let arr = [
 // }
  ];
 
-// onload render page 1
+// local storage state
+let state = localStorage.getItem("mindReaderState") || 0;
 
 
 
-// state represents each page
-let state = 0;
+
+
 
 // make buttons render next page (just assume right now they click next)
 document.getElementById("roundButtonString").addEventListener("click", () => {
