@@ -33,7 +33,7 @@ let arr = [
 
     // page five
 
-    { header: "Yo do me a favor and picture a sick buc-ee picture right here: picture your number right here",
+    { header: "",
     blueButtonString: "REVEAL", 
     caption1: "Find your new number.",
     caption2: "Note the symbol beside the number",
