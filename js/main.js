@@ -57,12 +57,8 @@ let state = parseInt(localStorage.getItem("mindReaderState")) || 0;
 function generateNumberList() {
     // check if current state is page 5
     if (state === 4) {
-        const header = document.getElementById("header");
-        header.innerHTML= ""; // clears header
-
         const numberList = document.getElementById("numberList");
-        numberList.innerHTML = "";
-
+       
         for (let i = 0; i < 100; i++) {
             const number = i.toString().padStart(2, "0"); // 2 digit format
             const iconNumber = i % 10; // end digit matches icon
@@ -71,7 +67,7 @@ function generateNumberList() {
             const listItem = document.createElement("span");
             listItem.className = "container";
             listItem.innerHTML = `<span class="${iconClass}"></span> ${number}`;
-            header.appendChild(listItem);
+            numberList.appendChild(listItem);
         }
     } 
 }
