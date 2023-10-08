@@ -102,40 +102,17 @@ document.getElementById("blueButtonString").addEventListener("click", () => {
 
 // Render event listener for round button
 document.getElementById("roundButtonString").addEventListener("click", () => {
-    state++;
-    init();
-    if (state >= 5 ) {
+    if (state === 0 ) {
+        state = 1;
+    } else {
         state = 0;
-    };
-    
+    }
+    localStorage.setItem("mindReaderState", state);
+    generateNumberList();
+    updatePageContent();
 });
 
-
-// if state is >=  the index of 5 then reset the index so it will start over at last page
-if (state >= 5 ) {
-    state = 0;
-};
-
-// populates the elements 
-function init() {
-    
-    let header = document.getElementById("header");
-    header.textContent = arr[state].header; 
-
-    let roundButtonString = document.getElementById("roundButtonString");
-    roundButtonString.textContent = arr[state].roundButtonString;
-
-    let blueButtonString = document.getElementById("blueButtonString");
-    blueButtonString.textContent = arr[state].blueButtonString;
-
-    let caption1 = document.getElementById("caption1");
-    caption1.textContent = arr[state].caption1;
-
-    let caption2 = document.getElementById("caption2");
-    caption2.textContent = arr[state].caption2;
-};
-
-init();
+generateNumberList();
 
 /* to load pages
 comment out all the lines immediately after each let statement above
